@@ -8,8 +8,7 @@ namespace App\Http\Controllers;
  * @author Leandro Padua
  *
  * @SWG\Swagger(
- *     basePath="",
- *     host="192.168.0.123/api/public",
+ *     basePath="/knockknockapi/public",
  *     schemes={"http"},
  *     @SWG\Info(title="Knock knock API", version="1.0",
  *          @SWG\Contact(name="Leandro Padua")
