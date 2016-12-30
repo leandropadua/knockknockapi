@@ -1,0 +1,135 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Knock knock API",
+        "contact": {
+            "name": "Leandro Padua"
+        },
+        "version": "1.0"
+    },
+    "host": "192.168.0.123/api/public",
+    "basePath": "",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/api/Fibonacci": {
+            "get": {
+                "tags": [
+                    "Fibonacci"
+                ],
+                "summary": "Returns the nth fibonacci number.",
+                "description": "Returns the nth number in the fibonacci sequence.",
+                "operationId": "api.fibonacci",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "n",
+                        "in": "query",
+                        "description": "The index (n) of the fibonacci sequence",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fibonacci Calculator."
+                    }
+                }
+            }
+        },
+        "/api/ReverseWords": {
+            "get": {
+                "tags": [
+                    "ReverseWords"
+                ],
+                "summary": "Reverses the letters of each word in a sentence.",
+                "description": "Reverses the letters of each word in a sentence.",
+                "operationId": "api.reverseWords",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "sentence",
+                        "in": "query",
+                        "description": "A sentence",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Reverse Sentence."
+                    }
+                }
+            }
+        },
+        "/api/Token": {
+            "get": {
+                "tags": [
+                    "Token"
+                ],
+                "summary": "My Token",
+                "description": "My Token.",
+                "operationId": "api.token",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "My Token."
+                    }
+                }
+            }
+        },
+        "/api/TriangleType": {
+            "get": {
+                "tags": [
+                    "TriangleType"
+                ],
+                "summary": "Returns the type of triange given the lengths of its sides.",
+                "description": "Returns the type of triange given the lengths of its sides.",
+                "operationId": "api.triangletype",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "a",
+                        "in": "query",
+                        "description": "The length of side a",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "b",
+                        "in": "query",
+                        "description": "The length of side b",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "c",
+                        "in": "query",
+                        "description": "The length of side c",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Triangle Type Discover."
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}
