@@ -60,7 +60,6 @@ class TriangleTypeController extends ApiController {
         $a = $request->input('a');
         $b = $request->input('b');
         $c = $request->input('c');
-        $result = $this->triangleCalculator->getTriangleType($a, $b, $c);
        
         //Check if the request is valid.
         if(!is_numeric($a) || !is_numeric($b) || !is_numeric($c)) {
@@ -68,6 +67,6 @@ class TriangleTypeController extends ApiController {
             return response(json_encode($response), Response::HTTP_BAD_REQUEST);
         }
         
-        return $result;
+        return  $this->triangleCalculator->getTriangleType($a, $b, $c);
     }
 }
